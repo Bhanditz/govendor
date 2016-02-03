@@ -19,6 +19,22 @@ that purpose.
  * Use "..." to also handle packages in sub-folders
  * Handle packages based on their status
 
+
+### Quick Start
+
+```sh
+# Install the govendor tool
+go get github.com/kardianos/govendor
+# Find your favourite go package
+cd $GOPATH/src/github.com/user/repo
+# Initialize the vendor/ directory
+govendor init
+# Add in all external dependencies
+govendor add +external
+# Run your program using the vendor/ directory
+GO15VENDOREXPERIMENT=1 go run main.go
+```
+
 ### Usage
 ```
 govendor: copy go packages locally. Uses vendor folder.
